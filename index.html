@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="#" target="_blank" />
+    <script>
+        // Function to update the address bar to the deep link
+        function updateToDeepLink() {
+            const url = window.location.origin + window.location.pathname + "#/deeplink?test-id=6f5d61af";
+            window.history.replaceState('', '', url);
+        }
+
+        // Function to clear the deep link and navigate back to the default route
+        function clearDeepLink() {
+            window.history.replaceState('', '', '');
+        }
+    </script>
+</head>
+<body>
+    <h1>Redirect Example</h1>
+    <p>Redirecting to the default route...</p>
+
+    <!-- Buttons to change URL -->
+    <button onclick="updateToDeepLink()">Go to Deep Link</button>
+    <button onclick="clearDeepLink()">Back to Default Route</button>
+</body>
+</html>
